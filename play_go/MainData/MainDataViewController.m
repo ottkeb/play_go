@@ -2,8 +2,8 @@
 //  MainDataViewController.m
 //  play_go
 //
-//  Created by Dascom_X on 16/7/26.
-//  Copyright © 2016年 Dascom. All rights reserved.
+//  Created by xuwj on 16/7/26.
+//  Copyright © 2016年 风影. All rights reserved.
 //
 
 #import "MainDataViewController.h"
@@ -11,13 +11,12 @@
 
 @interface MainDataViewController()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
-    
     UICollectionView *_dialCollectionView;
     UICollectionViewCell *_dialCell;
-    
     NSIndexPath     *selectIndexPath;
-    
 }
+
+@property (nonatomic,strong) CWRefreshTableView *cwRefreshTable;
 
 @end
 
@@ -30,35 +29,37 @@
         
     }
     return self;
-
-
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self customeNavagationTitle:@"今天"];
-    
     [self initCollectionView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 
 - (void)initCollectionView
 {
-
     CGSize itemSize = CGSizeMake(KWidth, KWidth-64);
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = itemSize;
     layout.minimumInteritemSpacing=0;
     layout.minimumLineSpacing=0;
-    _dialCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, KWidth, KWidth-64) collectionViewLayout:layout];
+    _dialCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KWidth-44) collectionViewLayout:layout];
     [_dialCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     _dialCollectionView.dataSource=self;
     
     _dialCollectionView.tag=300;
     _dialCollectionView.layer.borderWidth = 0;
-    _dialCollectionView.backgroundColor=RGB(0.0, 151.0, 224.0);
+    _dialCollectionView.backgroundColor=kNavBgColor;
     _dialCollectionView.delegate=self;
     _dialCollectionView.contentSize=CGSizeMake(-KWidth*30, 235.0+50);
     _dialCollectionView.bounces=NO;
@@ -68,11 +69,16 @@
     _dialCollectionView.contentOffset = CGPointMake(KWidth*30,0);
     _dialCollectionView.scrollEnabled = YES;
     
-  //  _dialCollectionView.prefetchingEnabled = NO; //是否开启预加载
+  // _dialCollectionView.prefetchingEnabled = NO; //是否开启预加载
     
     [self.view addSubview:_dialCollectionView];
-
     
+    
+//    //刷新控件
+//    if (_cwRefreshTable == nil) {
+//        _cwRefreshTable = [CWRefreshTableView alloc]initWithTableView:<#(UITableView *)#> pullDirection:<#(CWRefreshTableViewDirection)#> isNewSportVC:<#(NSString *)#>;
+//    }
+//
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -83,12 +89,11 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     static NSString *identifierCell = @"Cell";
     selectIndexPath = indexPath;
     _dialCell= (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifierCell forIndexPath:indexPath];
     
-    _dialCell.backgroundColor=RGB(0.0, 151.0, 224.0);
+    _dialCell.backgroundColor=kNavBgColor;
     
     [self addDial];
     
@@ -99,7 +104,7 @@
 - (void)addDial
 {
     LineProgressView *progressView = [[LineProgressView alloc] initWithFrame:_dialCell.bounds];
-    progressView.backgroundColor = RGB(0, 151, 224);
+    progressView.backgroundColor = kNavBgColor;
     progressView.total = 54;
     progressView.color = RGB(0, 124, 188);
     progressView.radius = 105;

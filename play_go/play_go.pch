@@ -44,6 +44,7 @@
 #import "FMDatabase.h"
 #import "MBProgressHUD.h"
 #import "WYWebController.h"
+#import "CWRefreshTableView.h"
 
 //----------------------汉字或字符替换---------------------------
 #define incompleteImagation  @"请输入用户名或密码"
