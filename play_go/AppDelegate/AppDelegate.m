@@ -23,6 +23,8 @@
     [NSThread sleepForTimeInterval:2];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    sfhkjdflejfgjhwgfjk
    // loginViewController *loginVC = [[loginViewController alloc]init];
     
    MainTabBarController *mainVC = [[MainTabBarController alloc]init];
