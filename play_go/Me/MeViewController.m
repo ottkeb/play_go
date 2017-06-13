@@ -18,9 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self customeNavagationTitle:@"我"];
-    
+    self.title = @"我";
     
     UITextField *textFile = [[UITextField alloc]initWithFrame:CGRectMake(100, 100, KWidth - 200, 50)];
     
