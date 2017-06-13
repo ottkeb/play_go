@@ -10,6 +10,7 @@
 #import "MainTabBarController.h"
 #import "loginViewController.h"
 #import "DataBaseManage.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,14 +21,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [NSThread sleepForTimeInterval:2];
+    //[NSThread sleepForTimeInterval:2];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-   // loginViewController *loginVC = [[loginViewController alloc]init];
+    loginViewController *loginVC = [[loginViewController alloc]init];
     
    MainTabBarController *mainVC = [[MainTabBarController alloc]init];
-   self.window.rootViewController = mainVC;
-   // self.window.rootViewController = loginVC;
+    self.window.rootViewController = mainVC;
+    //self.window.rootViewController = loginVC;
     [self.window makeKeyWindow];
     
     [self createDataBase];

@@ -8,6 +8,7 @@
 
 #import "loginViewController.h"
 #import "MainTabBarController.h"
+#import "loginHandleTool.h"
 @interface loginViewController ()<UITextFieldDelegate>
 
 @property (nonatomic,strong)UITapGestureRecognizer *contentTap;
@@ -183,10 +184,10 @@
         [Toast show:incompleteImagation];
     }
     else{
-        DULog(@"%@,%@",_userText.text,_passwordText.text);
+      DULog(@"%@,%@",_userText.text,_passwordText.text);
 //      kWindow.rootViewController =[[MainTabBarController alloc]init];
         
-        [self getDataFromSerVer:_userText.text passWordText:_passwordText.text];
+        [loginHandleTool loginClickWithUserName:_userText.text password:_passwordText.text];
     }
 }
 
@@ -244,15 +245,7 @@
 
 #pragma mark - server数据请求处理
 
-- (void)getDataFromSerVer :(NSString *)userStr passWordText :(NSString *)passwordStr
-{
-  CustomNetworkStatus status =[CustomNetworking currentNetworkReachabilityStatus];
-    if (status ==kCustomNetworkStatusNotReachable) {
-        [Toast show:@"无网络，请检查网络"];
-        return;
-    }
-    
-}
+
 
 
 - (void)didReceiveMemoryWarning {

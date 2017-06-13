@@ -15,6 +15,7 @@
    self= [super init];
     if (self) {
         self.view.backgroundColor = [UIColor whiteColor];
+        self.automaticallyAdjustsScrollViewInsets = NO;
     }
 
     return self;

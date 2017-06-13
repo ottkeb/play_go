@@ -16,7 +16,9 @@
     [super viewDidLoad];
     
     [self customeNavagationTitle:@"消息"];
-
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    label.backgroundColor = [UIColor redColor];
+    [self.view addSubview:label];
     UIButton *butn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     [butn setTitle:@"测试" forState:UIControlStateNormal];
     [butn setBackgroundColor:[UIColor yellowColor]];

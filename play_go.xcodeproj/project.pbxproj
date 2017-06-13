@@ -84,6 +84,7 @@
 		9BAD3C261DACBA15002BF684 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD3C201DACBA14002BF684 /* UIView+Frame.m */; };
 		9BAD3C271DACBA15002BF684 /* WYWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD3C221DACBA15002BF684 /* WYWebController.m */; };
 		9BAD3C281DACBA15002BF684 /* WYWebProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD3C241DACBA15002BF684 /* WYWebProgressLayer.m */; };
+		9BB893AA1EEA795E00D1042C /* loginHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB893A91EEA795E00D1042C /* loginHandleTool.m */; };
 		9BBB9E9A1DB4A36E004BC7F5 /* WXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB9E991DB4A36E004BC7F5 /* WXNavigationController.m */; };
 		9BCF46491DD05E0300BED2B4 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF46481DD05E0300BED2B4 /* MainTabBarController.m */; };
 		9BCF464D1DD05E5900BED2B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF464C1DD05E5900BED2B4 /* AppDelegate.m */; };
@@ -225,6 +226,8 @@
 		9BAD3C221DACBA15002BF684 /* WYWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebController.m; sourceTree = "<group>"; };
 		9BAD3C231DACBA15002BF684 /* WYWebProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWebProgressLayer.h; sourceTree = "<group>"; };
 		9BAD3C241DACBA15002BF684 /* WYWebProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebProgressLayer.m; sourceTree = "<group>"; };
+		9BB893A81EEA795E00D1042C /* loginHandleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginHandleTool.h; sourceTree = "<group>"; };
+		9BB893A91EEA795E00D1042C /* loginHandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginHandleTool.m; sourceTree = "<group>"; };
 		9BBB9E981DB4A36E004BC7F5 /* WXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXNavigationController.h; sourceTree = "<group>"; };
 		9BBB9E991DB4A36E004BC7F5 /* WXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXNavigationController.m; sourceTree = "<group>"; };
 		9BCF46471DD05E0300BED2B4 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 			children = (
 				9B432B4C1D4762A10012BEC7 /* loginViewController.h */,
 				9B432B4D1D4762A10012BEC7 /* loginViewController.m */,
+				9BB893A81EEA795E00D1042C /* loginHandleTool.h */,
+				9BB893A91EEA795E00D1042C /* loginHandleTool.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -672,7 +677,7 @@
 				TargetAttributes = {
 					9B432A971D470C930012BEC7 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BWXPA4CJGF;
+						DevelopmentTeam = EP4GDA6BZJ;
 						DevelopmentTeamName = "文京 徐 (Personal Team)";
 						ProvisioningStyle = Automatic;
 					};
@@ -799,6 +804,7 @@
 				9B432B4E1D4762A10012BEC7 /* loginViewController.m in Sources */,
 				9B2C537E1D48B11E000A493A /* DataBaseManage.m in Sources */,
 				9B432AE51D470D2D0012BEC7 /* BaseViewController.m in Sources */,
+				9BB893AA1EEA795E00D1042C /* loginHandleTool.m in Sources */,
 				9B2C53781D489870000A493A /* AFURLResponseSerialization.m in Sources */,
 				9B2C53771D489870000A493A /* AFURLRequestSerialization.m in Sources */,
 				9B2C53761D489870000A493A /* AFSecurityPolicy.m in Sources */,
@@ -944,6 +950,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EP4GDA6BZJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/play_go/play_go.pch";
 				INFOPLIST_FILE = play_go/Info.plist;
@@ -962,6 +969,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EP4GDA6BZJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/play_go/play_go.pch";
 				INFOPLIST_FILE = play_go/Info.plist;
