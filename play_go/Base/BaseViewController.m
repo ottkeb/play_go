@@ -22,8 +22,9 @@
 
 }
 
-- (void)customeNavagationTitle :(NSString *)title
-{
+- (void)setTitle:(NSString *)title {
+    [super setTitle:title];
+
     UILabel *titleText = [[UILabel alloc] initWithFrame: CGRectMake((KWidth-120)/2, 0, 120, 50)];
     titleText.textAlignment = NSTextAlignmentCenter;
     titleText.backgroundColor = [UIColor clearColor];
@@ -31,9 +32,7 @@
     [titleText setFont:[UIFont systemFontOfSize:20.0]];
     titleText.text =title;
     self.navigationItem.titleView=titleText;
-    
 }
-
 
 - (void)viewWillAppear:(BOOL)animated
 {

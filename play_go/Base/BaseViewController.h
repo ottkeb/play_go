@@ -10,9 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
-
-- (void)customeNavagationTitle :(NSString *)title;
-
 @end
 
 

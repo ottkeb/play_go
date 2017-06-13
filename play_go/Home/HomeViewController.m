@@ -23,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self customeNavagationTitle:@"首页"];
+    self.title = @"首页";
     [self initWebView];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(initWebView)name:@"reloadHomeWeb" object:nil];
    
@@ -31,7 +31,7 @@
 
 - (void)initWebView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, KWidth, KHeight - 64 - 44)];
     }
     _webView.delegate = self;
     _webView.opaque = NO;

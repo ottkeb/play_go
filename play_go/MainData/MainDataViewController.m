@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self customeNavagationTitle:@"今天"];
+    self.title = @"今天";
     [self initCollectionView];
 }
 
@@ -69,7 +69,7 @@
     _dialCollectionView.contentOffset = CGPointMake(KWidth*30,0);
     _dialCollectionView.scrollEnabled = YES;
     
-  // _dialCollectionView.prefetchingEnabled = NO; //是否开启预加载
+   _dialCollectionView.prefetchingEnabled = NO; //是否开启预加载
     
     [self.view addSubview:_dialCollectionView];
     
@@ -137,11 +137,11 @@
     [df setDateFormat:@"MM月dd日"];
     //将日期按照格式化类型转换成字符串
     if (index == 29) {
-        [self customeNavagationTitle:@"今天"];
+        [self setTitle:@"今天"];
     }
     else{
         
-    [self customeNavagationTitle: [df stringFromDate:date]];
+    [self setTitle: [df stringFromDate:date]];
         
     }
 }

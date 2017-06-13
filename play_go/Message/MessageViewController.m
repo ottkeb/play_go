@@ -14,8 +14,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self customeNavagationTitle:@"消息"];
+    self.title = @"消息";
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
     label.backgroundColor = [UIColor redColor];
     [self.view addSubview:label];

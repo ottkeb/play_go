@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     
-    [self customeNavagationTitle:@"发现"];
+    self.title = @"发现";
     
     [self.view addSubview: self.styleLabel];
 }
