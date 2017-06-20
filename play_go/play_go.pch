@@ -9,35 +9,10 @@
 #ifndef play_go_pch
 #define play_go_pch
 
-//DEBUG 模式下打印日志,当前行
-#ifdef DEBUG
-# define DULog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-# define DLog(...)
-#endif
-
-//----------------------常用的宏定义---------------------------
-#define KWidth  ([UIScreen mainScreen].bounds.size.width)
-#define KHeight ([UIScreen mainScreen].bounds.size.height)
-#define kWindow [UIApplication sharedApplication].keyWindow
-#define RGB(r, g, b)    [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-
-//----------------------数据库相关---------------------------
-//Documents
-#define kDB_PATH [NSHomeDirectory() stringByAppendingString:@"/Documents/"]
-
-//play_go.db
-#define kDB_PATH_NAME [kDB_PATH stringByAppendingFormat:@"play_go.db"]
-
-//----------------------颜色类---------------------------
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-#define COLOR(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
-
-//主题色
-#define kNavBgColor [UIColor colorWithRed:14.0/255.0 green:163.0/255.0 blue:243.0/255.0 alpha:1.0]
 
 //----------------------导入全局头文件---------------------------
 #import "Interface.h"
+#import "MacroFile.h"
 #import "UIViewExt.h"
 #import "Toast.h"
 #import "CustomNetworking.h"
@@ -45,10 +20,8 @@
 #import "MBProgressHUD.h"
 #import "WYWebController.h"
 #import "CWRefreshTableView.h"
-
-//----------------------汉字或字符替换---------------------------
-#define incompleteImagation  @"请输入用户名或密码"
-#define loginFail            @"登录失败"
+#import "Masonry.h"
+#import "CategoryHead.h"
 
 
 

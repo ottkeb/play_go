@@ -22,15 +22,26 @@
         
         self.navigationBar.barTintColor = kNavBgColor;
         self.delegate = self;
+
     }
     return self;
 }
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if (self.viewControllers.count >0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
 
 
 #pragma mark - UINavigationControllerDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-
+    
+    
 }
 
 @end

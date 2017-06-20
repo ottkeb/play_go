@@ -2,11 +2,14 @@
 //  AppDelegate.m
 //  webView
 //
-//  Created by xuwj on 17/6/1.
-//  Copyright © 2017年 风影. All rights reserved.
+//  Created by xuwj on 16/7/26.
+//  Copyright © 2016年 风影. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
+#import "loginViewController.h"
+#import "DataBaseManage.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +20,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //[NSThread sleepForTimeInterval:2];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    // loginViewController *loginVC = [[loginViewController alloc]init];
+    MainTabBarController *mainVC = [[MainTabBarController alloc]init];
+    //self.window.rootViewController = mainVC;
+    self.window.rootViewController = mainVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyWindow];
+    
+    [self createDataBase];
+    
     return YES;
 }
 
+- (void)createDataBase  {
+    
+    NSString *basePlistPath = [[NSBundle mainBundle]pathForResource:@"DataBaseList" ofType:@"plist"];
+    
+    NSMutableDictionary *mDic = [NSMutableDictionary dictionaryWithContentsOfFile:basePlistPath];
+    DULog(@"%@",mDic);
+    float version = [[mDic objectForKey:@"version"]floatValue];
+    DULog(@"%.f",version);
+    
+    [[DataBaseManage sharedManager]createDataBase];
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

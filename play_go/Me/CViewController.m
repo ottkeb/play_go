@@ -7,7 +7,7 @@
 //
 
 #import "CViewController.h"
-
+#import "MeViewController.h"
 @interface CViewController ()
 
 @end
@@ -16,7 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"C";
+    UIButton *butn = [[UIButton alloc]initWithFrame:CGRectMake(100, 300, 200, 100)];
+    [butn setBackgroundColor:[UIColor redColor]];
+    [butn addTarget:self action:@selector(butnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:butn];
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)butnClick {
+    
+    MeViewController *bVC = [[MeViewController alloc]init];
+    
+    [self .navigationController popToRootViewControllerAnimated:YES];
+    
+   // [self.navigationController pushViewController:bVC animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

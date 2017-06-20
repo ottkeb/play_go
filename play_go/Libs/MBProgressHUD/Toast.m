@@ -24,13 +24,6 @@ static MBProgressHUD *getToast()
     g_hudToast.center = CGPointMake(kWindown.frame.size.width/2.0f, kWindown.frame.size.height/2.0f-20);
     [kWindown addSubview:g_hudToast];
 
-//	if(g_hudToast==nil)
-//	{
-//		UIView* window = [[UIApplication sharedApplication].windows lastObject];
-//		g_hudToast = [[MBProgressHUD alloc] initWithView:window];
-//		//g_hudToast.mode = MBProgressHUDModeText;
-//		[window addSubview:g_hudToast];
-//	}
 	return g_hudToast;
 }
 

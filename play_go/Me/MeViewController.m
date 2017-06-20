@@ -7,7 +7,7 @@
 //
 
 #import "MeViewController.h"
-
+#import "BViewController.h"
 @interface MeViewController ()<UITextFieldDelegate>
 
 
@@ -26,6 +26,11 @@
     textFile.backgroundColor = [UIColor redColor];
     [self.view addSubview:textFile];
     
+    UIButton *butn = [[UIButton alloc]initWithFrame:CGRectMake(100, 300, 200, 100)];
+    [butn setBackgroundColor:[UIColor redColor]];
+    [butn addTarget:self action:@selector(butnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:butn];
+    
     
     //1、可在重货，最大载重，最大体积，0~999
     CGFloat inputWeight = 10;//输入框内的内容
@@ -36,7 +41,7 @@
         NSLog(@"输入内容不合法");
     }
     
-    
+
     //2、车辆长度 0~99
     CGFloat inputLength = 22;
     if (inputLength > 0 && inputLength <= 99) {
@@ -44,6 +49,16 @@
         NSLog(@"--------->车辆长度--》%f",carLength);
     }
 }
+
+- (void)butnClick {
+
+    BViewController *bVC = [[BViewController alloc]init];
+    
+    [self.navigationController pushViewController:bVC animated:YES];
+
+}
+
+
 
 
 - (void)textFieldEditChanged:(UITextField *)textField  {

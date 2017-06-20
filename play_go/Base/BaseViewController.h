@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface BaseViewController : UIViewController
+
+
+//设置右边按钮
+
+- (void)setNavigationBarRightItemWithTitle:(NSString *)title actionClickBlock:(void (^)(UIButton *button))actionClickBlock;
+
 
 @end
 

@@ -24,9 +24,13 @@
 {
     [super viewDidLoad];
     self.title = @"首页";
+    
     [self initWebView];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(initWebView)name:@"reloadHomeWeb" object:nil];
-   
+    WeakSelf;
+    [self setNavigationBarRightItemWithTitle:@"提交" actionClickBlock:^(UIButton *button) {
+        [weakSelf initWebView];
+    }];
 }
 
 - (void)initWebView {
@@ -38,11 +42,17 @@
     _webView.backgroundColor = [UIColor whiteColor];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
     _webView.backgroundColor = [UIColor whiteColor];
+    [self initProgressLayer];
     [self.view addSubview:_webView];
 }
 
 - (void)initProgressLayer
 {
+    if (_progressLayer) {
+        [_progressLayer removeFromSuperlayer];
+        [_progressLayer finishedLoad];
+        _progressLayer = nil;
+    }
     _progressLayer = [[WYWebProgressLayer alloc]init];
     _progressLayer.frame = CGRectMake(0, 42, KWidth, 2);
     _progressLayer.backgroundColor = [UIColor clearColor].CGColor;
@@ -67,7 +77,6 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [self finishOrFailLoad];
-
 }
 
 - (void)finishOrFailLoad

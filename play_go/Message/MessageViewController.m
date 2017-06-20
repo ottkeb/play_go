@@ -8,7 +8,7 @@
 
 #import "MessageViewController.h"
 #import "WYWebController.h"
-#import "WYWebProgressLayer.h"
+
 @implementation MessageViewController
 
 - (void)viewDidLoad
@@ -29,9 +29,9 @@
 - (void)butnClick
 {
     NSLog(@"消息");
+    
     WYWebController *webVC = [[WYWebController alloc]init];
     webVC.url = @"https://www.baidu.com";
-    webVC.hidesBottomBarWhenPushed = YES;
 
     [self.navigationController pushViewController:webVC animated:YES];
 }

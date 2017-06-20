@@ -24,6 +24,7 @@
     self = [super init];
     if (self) {
         [self setChildViewControllers];
+
         self.delegate = self;
     }
     return self;
@@ -67,14 +68,17 @@
 
 #pragma mark - UITabBarControllerDelegate
 
+
+
+
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     viewController.tabBarItem.badgeValue = nil;
     NSLog(@"点击了%@",viewController.tabBarItem.title);
     
-    if ([viewController.tabBarController.title isEqualToString:@"首页"]) {
+    
+    if ([viewController.tabBarItem.title isEqualToString:@"首页"]) {
           [[NSNotificationCenter defaultCenter]postNotificationName:@"reloadHomeWeb" object:nil userInfo:nil];
     }
-    NSLog(@"------>%@",viewController.tabBarController.title);
 }
 @end
