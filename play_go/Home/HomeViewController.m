@@ -35,7 +35,7 @@
 
 - (void)initWebView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, KWidth, KHeight - 64 - 44)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight - 44 - 64)];
     }
     _webView.delegate = self;
     _webView.opaque = NO;

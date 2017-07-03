@@ -26,6 +26,9 @@
         [self setChildViewControllers];
 
         self.delegate = self;
+        
+        self.selectedIndex = 3;
+
     }
     return self;
 }
@@ -67,9 +70,6 @@
 }
 
 #pragma mark - UITabBarControllerDelegate
-
-
-
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {

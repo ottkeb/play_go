@@ -19,13 +19,7 @@
 
 @end
 
-
-
-
 @implementation NSDate (Extend)
-
-
-
 
 
 /*
@@ -41,9 +35,6 @@
 }
 
 
-
-
-
 /*
  *  时间成分
  */
@@ -57,9 +48,6 @@
 
     return [calendar components:unit fromDate:self];
 }
-
-
-
 
 
 /*
@@ -79,10 +67,6 @@
     return res;
 }
 
-
-
-
-
 /*
  *  是否是今天
  */
@@ -91,9 +75,6 @@
     //差值为0天
     return [self calWithValue:0];
 }
-
-
-
 
 
 /*
@@ -144,15 +125,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 /**
  *  两个时间比较
  *
@@ -172,37 +144,5 @@
     
     return components;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end

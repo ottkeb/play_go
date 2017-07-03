@@ -17,6 +17,13 @@
 # define DLog(...)
 #endif
 
+#ifdef DEBUG
+# define ULog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
+
+#else
+# define ULog(...)
+#endif
+
 //----------------------常用的宏定义---------------------------
 #define KWidth  ([UIScreen mainScreen].bounds.size.width)
 #define KHeight ([UIScreen mainScreen].bounds.size.height)
@@ -50,6 +57,7 @@
 //----------------------汉字或字符替换---------------------------
 #define incompleteImagation  @"请输入用户名或密码"
 #define loginFail            @"登录失败"
+
 
 
 #endif /* MacroFile_h */

@@ -26,10 +26,9 @@ typedef void(^ActionBlock)(UIButton *butn);
     if (self) {
         self.view.backgroundColor = [UIColor whiteColor];
         self.automaticallyAdjustsScrollViewInsets = NO;
+        self.edgesForExtendedLayout=UIRectEdgeBottom;//修改坐标起点
     }
-
     return self;
-
 }
 
 - (void)setTitle:(NSString *)title {
@@ -69,7 +68,6 @@ typedef void(^ActionBlock)(UIButton *butn);
       self.actionBlock(butn);
 }
      
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

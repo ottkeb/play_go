@@ -23,9 +23,6 @@
     }
 }
 
-
-
-
 #pragma mark  宋体
 +(UIFont *)songTypefaceFontOfSize:(CGFloat)size{
     
@@ -33,25 +30,16 @@
     
 }
 
-
-
-
-
 #pragma mark  微软雅黑
 +(UIFont *)microsoftYaHeiFontOfSize:(CGFloat)size{
     return [UIFont fontWithName:@"MicrosoftYaHei" size:size];
 }
 
 
-
-
 #pragma mark  微软雅黑：加粗字体
 +(UIFont *)boldMicrosoftYaHeiFontOfSize:(CGFloat)size{
     return [UIFont fontWithName:@"MicrosoftYaHei-Bold" size:size];
 }
-
-
-
 
 #pragma mark  DroidSansFallback
 +(UIFont *)customFontNamedDroidSansFallbackWithFontOfSize:(CGFloat)size{

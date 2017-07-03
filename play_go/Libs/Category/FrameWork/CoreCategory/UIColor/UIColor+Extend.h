@@ -15,11 +15,7 @@
 #define ramdomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0f green:arc4random_uniform(255)/255.0f blue:arc4random_uniform(255)/255.0f alpha:1.0f]
 
 
-
-
 @interface UIColor (Extend)
-
-
 
 
 /**
@@ -27,19 +23,10 @@
  */
 + (UIColor *)colorWithHexColorString:(NSString *)hexColorString;
 
-
-
-
-
-
 /**
  *  十六进制颜色:含alpha
  */
 + (UIColor *)colorWithHexColorString:(NSString *)hexColorString alpha:(float)alpha;
-
-
-
-
 
 
 @end

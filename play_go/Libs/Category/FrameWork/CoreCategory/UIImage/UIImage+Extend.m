@@ -12,7 +12,6 @@
 
 @implementation UIImage (Extend)
 
-
 /**
  *  获取启动图片
  */
@@ -28,7 +27,6 @@
     
     return [UIImage imageNamed:imageName];
 }
-
 
 /**
  *  根据不同的iphone屏幕大小自动加载对应的图片名
@@ -61,8 +59,6 @@
 }
 
 
-
-
 /**
  *  拉伸图片
  */
@@ -73,27 +69,12 @@
 }
 
 
-
-
 #pragma mark  拉伸图片
 +(UIImage *)resizeWithImageName:(NSString *)name{
     
     return [self resizeWithImageName:name leftCap:.5f topCap:.5f];
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

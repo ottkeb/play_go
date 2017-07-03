@@ -11,16 +11,10 @@
 @interface UIImage (Extend)
 
 
-
-
-
 /**
  *  拉伸图片:自定义比例
  */
 +(UIImage *)resizeWithImageName:(NSString *)name leftCap:(CGFloat)leftCap topCap:(CGFloat)topCap;
-
-
-
 
 
 /**

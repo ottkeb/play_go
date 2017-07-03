@@ -26,9 +26,6 @@
 +(UIFont *)songTypefaceFontOfSize:(CGFloat)size;
 
 
-
-
-
 /**
  *  微软雅黑：正常字体
  */

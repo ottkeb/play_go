@@ -86,8 +86,11 @@
 		9B6B09691DAB8CA800339482 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B09681DAB8CA800339482 /* Images.xcassets */; };
 		9B6B096B1DAB8EA100339482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B096A1DAB8EA100339482 /* LaunchScreen.storyboard */; };
 		9B6B096D1DAB8EE900339482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B096C1DAB8EE900339482 /* Main.storyboard */; };
+		9B6DA4DA1F09E3810072E87D /* NSObject+ModelToDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DA4D91F09E3810072E87D /* NSObject+ModelToDict.m */; };
 		9BB893AA1EEA795E00D1042C /* loginHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB893A91EEA795E00D1042C /* loginHandleTool.m */; };
 		9BBB9E9A1DB4A36E004BC7F5 /* WXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB9E991DB4A36E004BC7F5 /* WXNavigationController.m */; };
+		9BC428ED1F00D45300DDF15D /* CacheFileManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC428EA1F00D45300DDF15D /* CacheFileManage.m */; };
+		9BC428EE1F00D45300DDF15D /* NSUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC428EC1F00D45300DDF15D /* NSUserDefaults+Extension.m */; };
 		9BCF46491DD05E0300BED2B4 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF46481DD05E0300BED2B4 /* MainTabBarController.m */; };
 		9BCF464D1DD05E5900BED2B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF464C1DD05E5900BED2B4 /* AppDelegate.m */; };
 		9BEA83841EF7A737009E5642 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA836A1EF7A737009E5642 /* LICENSE */; };
@@ -163,6 +166,7 @@
 		9BEA843A1EF7AA3A009E5642 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA83FE1EF7AA3A009E5642 /* UIView+Extension.m */; };
 		9BEA843E1EF7C911009E5642 /* fav_fileicon_ppt90@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA843C1EF7C911009E5642 /* fav_fileicon_ppt90@2x.png */; };
 		9BEA843F1EF7C911009E5642 /* fav_fileicon_ppt90@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA843D1EF7C911009E5642 /* fav_fileicon_ppt90@3x.png */; };
+		9BEA84481EF90CC4009E5642 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA84471EF90CC4009E5642 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,10 +309,16 @@
 		9B6B09681DAB8CA800339482 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9B6B096A1DAB8EA100339482 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6B096C1DAB8EE900339482 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9B6DA4D81F09E3810072E87D /* NSObject+ModelToDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ModelToDict.h"; sourceTree = "<group>"; };
+		9B6DA4D91F09E3810072E87D /* NSObject+ModelToDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ModelToDict.m"; sourceTree = "<group>"; };
 		9BB893A81EEA795E00D1042C /* loginHandleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginHandleTool.h; sourceTree = "<group>"; };
 		9BB893A91EEA795E00D1042C /* loginHandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginHandleTool.m; sourceTree = "<group>"; };
 		9BBB9E981DB4A36E004BC7F5 /* WXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXNavigationController.h; sourceTree = "<group>"; };
 		9BBB9E991DB4A36E004BC7F5 /* WXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXNavigationController.m; sourceTree = "<group>"; };
+		9BC428E91F00D45300DDF15D /* CacheFileManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFileManage.h; sourceTree = "<group>"; };
+		9BC428EA1F00D45300DDF15D /* CacheFileManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheFileManage.m; sourceTree = "<group>"; };
+		9BC428EB1F00D45300DDF15D /* NSUserDefaults+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extension.h"; sourceTree = "<group>"; };
+		9BC428EC1F00D45300DDF15D /* NSUserDefaults+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extension.m"; sourceTree = "<group>"; };
 		9BCF46471DD05E0300BED2B4 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		9BCF46481DD05E0300BED2B4 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		9BCF464B1DD05E5900BED2B4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -434,6 +444,8 @@
 		9BEA843B1EF7AEA5009E5642 /* CategoryHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryHead.h; sourceTree = "<group>"; };
 		9BEA843C1EF7C911009E5642 /* fav_fileicon_ppt90@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_fileicon_ppt90@2x.png"; sourceTree = "<group>"; };
 		9BEA843D1EF7C911009E5642 /* fav_fileicon_ppt90@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_fileicon_ppt90@3x.png"; sourceTree = "<group>"; };
+		9BEA84461EF90CC4009E5642 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9BEA84471EF90CC4009E5642 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -695,6 +707,7 @@
 		9B432B201D475A700012BEC7 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9BEA84451EF90CC4009E5642 /* JSONKit */,
 				9BEA838F1EF7AA3A009E5642 /* Category */,
 				9BEA83691EF7A737009E5642 /* Masonry */,
 				9B3B92341EEFE49900979D3C /* Web */,
@@ -863,7 +876,13 @@
 		9BEA838F1EF7AA3A009E5642 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9B6DA4D81F09E3810072E87D /* NSObject+ModelToDict.h */,
+				9B6DA4D91F09E3810072E87D /* NSObject+ModelToDict.m */,
 				9BEA83911EF7AA3A009E5642 /* FrameWork */,
+				9BC428E91F00D45300DDF15D /* CacheFileManage.h */,
+				9BC428EA1F00D45300DDF15D /* CacheFileManage.m */,
+				9BC428EB1F00D45300DDF15D /* NSUserDefaults+Extension.h */,
+				9BC428EC1F00D45300DDF15D /* NSUserDefaults+Extension.m */,
 				9BEA83901EF7AA3A009E5642 /* Foundation+Log.m */,
 				9BEA83F31EF7AA3A009E5642 /* NSDate+Estension.h */,
 				9BEA83F41EF7AA3A009E5642 /* NSDate+Estension.m */,
@@ -1112,6 +1131,15 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		9BEA84451EF90CC4009E5642 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				9BEA84461EF90CC4009E5642 /* JSONKit.h */,
+				9BEA84471EF90CC4009E5642 /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1332,6 +1360,7 @@
 				9B3B92371EEFE49900979D3C /* WYWebController.m in Sources */,
 				9BEA84331EF7AA3A009E5642 /* CorePageControl.m in Sources */,
 				9BEA838D1EF7A737009E5642 /* View+MASAdditions.m in Sources */,
+				9BC428ED1F00D45300DDF15D /* CacheFileManage.m in Sources */,
 				9B432AE41D470D2D0012BEC7 /* BaseNavigationController.m in Sources */,
 				9BEA84381EF7AA3A009E5642 /* UIButton+Extension.m in Sources */,
 				9B3B92401EF220E900979D3C /* CViewController.m in Sources */,
@@ -1376,6 +1405,8 @@
 				9BEA84071EF7AA3A009E5642 /* UIButton+ImageBtn.m in Sources */,
 				9BEA84051EF7AA3A009E5642 /* NSString+Extend.m in Sources */,
 				9B3B92351EEFE49900979D3C /* UIView+Frame.m in Sources */,
+				9BC428EE1F00D45300DDF15D /* NSUserDefaults+Extension.m in Sources */,
+				9BEA84481EF90CC4009E5642 /* JSONKit.m in Sources */,
 				9BEA838A1EF7A737009E5642 /* MASViewConstraint.m in Sources */,
 				9B432AEA1D470D2D0012BEC7 /* MeViewController.m in Sources */,
 				9BEA843A1EF7AA3A009E5642 /* UIView+Extension.m in Sources */,
@@ -1392,6 +1423,7 @@
 				9BEA84391EF7AA3A009E5642 /* UIImage+Extension.m in Sources */,
 				9B432AE61D470D2D0012BEC7 /* FinderViewController.m in Sources */,
 				9B3B92361EEFE49900979D3C /* NSTimer+addition.m in Sources */,
+				9B6DA4DA1F09E3810072E87D /* NSObject+ModelToDict.m in Sources */,
 				9BEA838B1EF7A737009E5642 /* NSArray+MASAdditions.m in Sources */,
 				9BEA84361EF7AA3A009E5642 /* NSString+Extension.m in Sources */,
 				9B2C53741D489870000A493A /* AFHTTPSessionManager.m in Sources */,

@@ -9,6 +9,7 @@
 #ifndef CategoryHead_h
 #define CategoryHead_h
 
+//类目的头文件合集，使用时导入该文件即可
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+Extend.h"
 #import "UIView+Extension.h"
@@ -36,6 +37,8 @@
 #import "UIImage+TintColor.h"
 #import "UITableViewCell+Extend.h"
 #import "UIWindow+Launch.h"
+#import "CacheFileManage.h"
+#import "NSUserDefaults+Extension.h"
 
 
 #endif /* CategoryHead_h */

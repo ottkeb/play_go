@@ -7,7 +7,6 @@
 //
 
 #import "FinderViewController.h"
-
 @interface FinderViewController ()
 
 @property(nonatomic,copy) UILabel *styleLabel;
@@ -22,9 +21,29 @@
     
     self.title = @"发现";
     
-    [self.view addSubview: self.styleLabel];
+    [self cacheManage];
+    
+   // [self.view addSubview: self.styleLabel];
 }
 
+- (void)cacheManage {
+    
+  // NSString *str = @"https://wap.wanbu.com.cn/NewWanbu/App/Api/index.php/MemberInfo/GetStepsNum/userid/785688/starttime/1497581913/position/left/count/20";
+    ;
+    //可以存入字典，数组，字符串，
+    NSDictionary *rr = @{@"222":@"xuwj"};
+  
+    [NSUserDefaults setValue:rr forKey:@"rr0000"];
+    
+    id obj = [NSUserDefaults objectForKey:@"rr"];
+    ULog(@"----obj---->%@",obj);
+    
+}
+
+
+
+
+#if 0
 - (UILabel *)styleLabel
 {
     if (!_styleLabel) {
@@ -45,7 +64,7 @@
     }
     return _styleLabel;
 }
-
+#endif
 
 
 @end
